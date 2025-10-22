@@ -1,0 +1,16 @@
+@import "../../../_css/common";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--base);
+  margin-top: 32px;
+}

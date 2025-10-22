@@ -1,0 +1,67 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter';
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input {
+    width: 100%;
+    max-width: 100%;
+    max-height: 200px;
+    font-family: 'Inter';
+    border: 1px solid #211709;
+    background: none;
+    background-color: white;
+    color: #211709;
+    height: calc(var(--base) * 2);
+    padding: 0 calc(var(--base) / 2);
+    line-height: 120%;
+    font-size: 14 px;
+    border-radius: 16px;
+    box-shadow:
+        inset -4px -4px 8px rgba(165, 70, 9, 0.25),
+        inset 0 4px 4px rgba(255, 255, 255, 0.5);
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        -webkit-text-fill-color: var(--theme-text);
+        -webkit-box-shadow: 0 0 0px 1000px var(--theme-elevation-150) inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}

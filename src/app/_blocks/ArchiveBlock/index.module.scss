@@ -1,0 +1,66 @@
+@import '../../_css/common';
+
+.archiveBlock {
+  position: relative;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-flex;
+  padding: 12px 24px;
+  line-height: 120%;
+  font-size: 16px;
+  border-radius: 16px;
+  color: #41210D;
+}
+
+.introContent {
+  margin-bottom: calc(var(--base) * 2);
+
+  @include mid-break {
+    margin-bottom: calc(var(--base) * 2);
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}

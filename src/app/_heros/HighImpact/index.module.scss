@@ -1,0 +1,94 @@
+@import '../../_css/queries.scss';
+
+.hero {
+  padding-top: calc(var(--base) * 2);
+  position: relative;
+  overflow: hidden;
+
+  @include mid-break {
+    padding-top: var(--gutter-h);
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-flex;
+  padding: 8px 16px;
+  line-height: 120%;
+  font-size: 16px;
+  border-radius: 50px;
+  align-items: center;
+  transition: .5s;
+  color: white;
+  background-image: linear-gradient(to right, #085269 0%, rgb(29, 125, 155) 51%, #085269 100%);
+  background-size: 200% auto;
+  min-height: 52px;
+  border: 1px solid #085269;
+  background-size: 200% auto;
+
+  &:hover {
+      background-image: linear-gradient(to right, #085269 0%, rgb(29, 125, 155) 51%, #085269 100%);
+      border-color: #085269;
+      background-position: right center;
+      box-shadow: 0 4px 15px 0 rgba(29, 125, 155, 0.5);
+  }
+}
+
+.media {
+  width: calc(100% + var(--gutter-h));
+  left: calc(var(--gutter-h) / -2);
+  margin-top: calc(var(--base) * 3);
+  position: relative;
+
+  @include mid-break {
+    left: 0;
+    margin-top: var(--base);
+    margin-left: calc(var(--gutter-h) * -1);
+    width: calc(100% + var(--gutter-h) * 2);
+  }
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  padding-top: var(--base);
+  flex-wrap: wrap;
+  margin: calc(var(--base) * -.5);
+
+  &>* {
+    margin: calc(var(--base) / 2);
+  }
+}
+
+.caption {
+  margin-top: var(--base);
+  color: var(--theme-elevation-500);
+  left: calc(var(--gutter-h) / 2);
+  width: calc(100% - var(--gutter-h));
+  position: relative;
+
+  @include mid-break {
+    left: var(--gutter-h);
+  }
+}
+
+.content {
+  position: relative;
+}
+
+.blur {
+  backdrop-filter: blur(20px);
+  overflow: visible;
+  background: linear-gradient(45deg, rgba(255, 139, 65, 1), rgba(168, 175, 198, 0.65), rgba(168, 175, 198, 0.05)), ;
+}

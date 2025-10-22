@@ -1,0 +1,50 @@
+@use '../../_css/queries.scss' as *;
+
+.content {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #085269;
+    }
+
+    p {
+        color: #5C5251;
+    }
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    background-color: transparent;
+    text-decoration: none;
+    display: inline-flex;
+    padding: 8px 16px;
+    line-height: 120%;
+    font-size: 16px;
+    border-radius: 50px;
+    align-items: center;
+    transition: .5s;
+    color: white;
+    background-image: linear-gradient(to right, #085269 0%, rgb(29, 125, 155) 51%, #085269 100%);
+    background-size: 200% auto;
+    min-height: 52px;
+    border: 1px solid #085269;
+    background-size: 200% auto;
+
+    &:hover {
+        background-image: linear-gradient(to right, #085269 0%, rgb(29, 125, 155) 51%, #085269 100%);
+        border-color: #085269;
+        background-position: right center;
+        box-shadow: 0 4px 15px 0 rgba(29, 125, 155, 0.5);
+    }
+}

@@ -1,0 +1,17 @@
+@use '../../_css/queries.scss' as *;
+
+.content {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #085269;
+    }
+
+    p {
+        color: #5C5251;
+    }
+}

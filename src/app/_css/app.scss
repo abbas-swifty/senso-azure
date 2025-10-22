@@ -1,0 +1,264 @@
+@use './queries.scss' as *;
+@use './colors.scss' as *;
+@use './type.scss' as *;
+@import "./theme.scss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter&display=swap');
+
+:root {
+  --base: 24px;
+  --font-body: 'DM Serif Display', serif;
+  --font-mono: 'Inter', sans-serif;
+
+  --gutter-h: 180px;
+  --block-padding: 120px;
+
+  @include large-break {
+    --gutter-h: 144px;
+    --block-padding: 96px;
+  }
+
+  @include mid-break {
+    --gutter-h: 24px;
+    --block-padding: 60px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @extend %body;
+  background: var(--theme-bg);
+  // background: red;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  // opacity: 0;
+
+  // &[data-theme=dark],
+  // &[data-theme=light] {
+  //   opacity: initial;
+  // }
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--theme-bg);
+  margin: 0;
+  // background: red;
+  color: var(--theme-text);
+  color: black;
+}
+
+::selection {
+  background: var(--theme-success-500);
+  color: var(--color-base-800);
+}
+
+::-moz-selection {
+  background: var(--theme-success-500);
+  color: var(--color-base-800);
+}
+
+// img {
+//   max-width: 100%;
+//   // height: auto;
+//   display: block;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+p,
+a,
+span {
+  margin: 0px;
+  font-family: var(--font-mono);
+}
+
+%label {
+  font-family: var(--font-mono);
+}
+
+// h1 {
+//   @extend %h1;
+// }
+
+// h2 {
+//   @extend %h2;
+// }
+
+// h3 {
+//   @extend %h3;
+// }
+
+// h4 {
+//   @extend %h4;
+// }
+
+// h5 {
+//   @extend %h5;
+// }
+
+// h6 {
+//   @extend %h6;
+// }
+
+// p {
+//   margin: var(--base) 0;
+
+//   @include mid-break {
+//     margin: calc(var(--base) * .75) 0;
+//   }
+// }
+
+// ul,
+// ol {
+//   padding-left: var(--base);
+//   margin: 0 0 var(--base);
+// }
+
+// a {
+//   color: currentColor;
+
+//   &:focus {
+//     opacity: .8;
+//     outline: none;
+//   }
+
+//   &:active {
+//     opacity: .7;
+//     outline: none;
+//   }
+// }
+
+// svg {
+//   vertical-align: middle;
+// }
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.image-gallery-thumbnail {
+  width: fit-content !important;
+}
+
+.image-gallery-svg {
+  color: #9E9E9E;
+  height: 60px !important;
+}
+
+.image-gallery-icon {
+  filter: none !important;
+}
+
+.image-gallery-thumbnail.active {
+  border: none !important;
+}
+
+.image-gallery-thumbnail:hover {
+  border: none !important;
+}
+
+.image-gallery-thumbnail:focus {
+  border: none !important;
+}
+
+.carousel-container {
+  padding-bottom: 60px;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: 10px !important;
+}
+
+.react-multiple-carousel__arrow--left {
+  left: 10px !important;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background-color: #41210D !important;
+  background: #41210D !important;
+}
+
+.react-multiple-carousel__arrow {
+  background-color: #41210D65 !important;
+  background: #41210D65 !important;
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: #41210D !important;
+  background: #41210D !important;
+  border-width: 1.2px !important;
+  border-style: solid;
+  border-color: #41210D !important;
+}
+
+.react-multi-carousel-dot button {
+  display: inline-block;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  opacity: 1;
+  padding: 5px 5px 5px 5px;
+  box-shadow: none;
+  transition: background .5s;
+  border-width: 1.2px !important;
+  border-style: solid;
+  border-color: #41210D50 !important;
+  padding: 0;
+  margin: 0;
+  margin-right: 6px;
+  outline: 0;
+  cursor: pointer;
+}
+
+a {
+  transition: opacity 0.2s ease-in-out;
+  // &:hover {
+  //   opacity: 75%;
+  // }
+}

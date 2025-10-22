@@ -1,0 +1,57 @@
+@use '../../../_css/queries.scss' as *;
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  opacity: 1;
+  transition: opacity 100ms linear;
+  visibility: visible;
+  position: relative;
+
+  >* {
+    text-decoration: none;
+  }
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navItem {
+  position: relative;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  z-index: 10;
+  box-shadow:
+    8px 12px 32px rgba(165, 70, 9, 0.25),
+    inset -4px -4px 8px rgba(165, 70, 9, 0.25),
+    inset 0 4px 4px rgba(255, 255, 255, 0.5);
+}
+
+.navItem:hover .subMenu {
+  display: block;
+}
+
+.subMenu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.subMenu a:hover {
+  box-shadow:
+    inset -4px -4px 8px rgba(165, 70, 9, 0.25),
+    inset 0 4px 4px rgba(255, 255, 255, 0.5);
+}

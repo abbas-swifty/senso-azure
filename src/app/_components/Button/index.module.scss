@@ -1,0 +1,122 @@
+@import '../../_css/type.scss';
+
+.button {
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-flex;
+  padding: 8px 16px;
+  align-items: center;
+  min-height: 52px;
+  font-family: inherit;
+  line-height: 120%;
+  font-size: 16px;
+  border-radius: 50px;
+  position: relative;
+  transition: .5s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition-duration: 500ms;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+
+  svg {
+    margin-right: calc(var(--base) / 2);
+    width: var(--base);
+    height: var(--base);
+  }
+}
+
+.label {
+  @extend %label;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  // color: white;
+  text-decoration: none;
+}
+
+.appearance--primary {
+  min-height: 52px;
+  background-image: linear-gradient(to right, #085269 0%, rgb(29, 125, 155) 51%, #085269 100%);
+  background-size: 200% auto;
+  border: 1px solid #085269;
+  &:hover {
+    background-position: right center;
+    box-shadow: 0 4px 15px 0 rgba(29, 125, 155, 0.5);
+  }
+}
+
+.appearance--secondary {
+  background-image: linear-gradient(to right, #08526900 0%, rgb(29, 125, 155, 0) 51%, #08526900 100%);
+  min-height: 52px;
+  border: 1px solid #085269;
+
+  &:hover {
+    background-image: linear-gradient(to right, #085269 0%, rgb(29, 125, 155) 51%, #085269 100%);
+    border-color: #085269;
+    background-position: right center;
+    box-shadow: 0 4px 15px 0 rgba(29, 125, 155, 0.5);
+  }
+}
+
+.primary--invert {
+  min-height: 52px;
+  background-image: linear-gradient(to right, #085269 0%, rgb(29, 125, 155) 51%, #085269 100%);
+  background-size: 200% auto;
+  border: 1px solid #085269;
+
+  &:hover {
+    background-position: right center;
+    box-shadow: 0 4px 15px 0 rgba(29, 125, 155, 0.5);
+  }
+}
+
+.secondary--invert {
+  background-image: linear-gradient(to right, #08526900 0%, rgb(29, 125, 155, 0) 51%, #08526900 100%);
+  min-height: 52px;
+  border: 1px solid #085269;
+
+  &:hover {
+    background-image: linear-gradient(to right, #085269 0%, rgb(29, 125, 155) 51%, #085269 100%);
+    border-color: #085269;
+    background-position: right center;
+    box-shadow: 0 4px 15px 0 rgba(29, 125, 155, 0.5);
+  }
+}
+
+.appearance--default {
+  background-image: linear-gradient(to right, #08526900 0%, rgb(29, 125, 155, 0) 51%, #08526900 100%);
+  min-height: 52px;
+  border: 1px solid #085269;
+
+  &:hover {
+    background-image: linear-gradient(to right, #085269 0%, rgb(29, 125, 155) 51%, #085269 100%);
+    border-color: #085269;
+    background-position: right center;
+    box-shadow: 0 4px 15px 0 rgba(29, 125, 155, 0.5);
+  }
+}
+
+.appearance--none {
+  padding: 0;
+  box-shadow: none;
+  min-height: 56px;
+
+  &:local() {
+    .label {
+      text-transform: none;
+      line-height: inherit;
+      font-size: inherit;
+    }
+  }
+}

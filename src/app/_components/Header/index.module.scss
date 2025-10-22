@@ -1,0 +1,21 @@
+@use '../../_css/queries.scss' as *;
+
+.header {
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: calc(var(--base) / 2) var(--base);
+}
+
+// .logo {
+//   filter: invert(1);
+//   @apply h-12 object-contain object-center w-60
+// }
+
+// :global([data-theme="light"]) {
+//   .logo {
+//     filter: invert(0);
+//   }
+// }
