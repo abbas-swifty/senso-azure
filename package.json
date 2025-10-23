@@ -23,7 +23,7 @@
     "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload"
   },
   "dependencies": {
-    "@next/swc-win32-x64-msvc": "^15.0.2",
+    "@next/swc-linux-x64-gnu": "^15.0.2",
     "@payloadcms/bundler-webpack": "^1.0.0",
     "@payloadcms/db-mongodb": "^1.0.0",
     "@payloadcms/plugin-cloud": "^3.0.0",
