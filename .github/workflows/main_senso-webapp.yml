@@ -46,4 +46,4 @@ jobs:
           app-name: 'senso-webapp'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_831EF86295F64E6FA97BC5B9B66F2A24 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D5BF913FC32047CF8D2FC12E33E33F54 }}
