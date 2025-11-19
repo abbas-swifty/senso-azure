@@ -14,7 +14,7 @@ import payload from 'payload'
 import { seed } from './payload/seed'
 
 const app = express()
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 5000
 
 const start = async (): Promise<void> => {
   try {
