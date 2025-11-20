@@ -58,20 +58,7 @@ const start = async (): Promise<void> => {
     res.status(200).json({ status: 'ok' })
   })
 
-  app.use((req, res, nextExpress) => {
-    const url = req.originalUrl || req.url || ''
-    const shouldDeferToPayload =
-      url.startsWith('/admin') ||
-      url.startsWith('/api') ||
-      url.startsWith('/_payload') ||
-      url.startsWith('/media')
-
-    if (shouldDeferToPayload) {
-      return nextExpress()
-    }
-
-    return nextHandler(req, res)
-  })
+  app.use((req, res) => nextHandler(req, res))
 
   nextApp
     .prepare()
